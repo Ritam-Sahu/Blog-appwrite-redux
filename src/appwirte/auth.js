@@ -1,4 +1,4 @@
-import conf from '../conf.js';
+import conf from '../conf/conf.js';
 import {Client, Account, ID} from "appwrite";
 
 // AuthService acts as a service layer for authentication
@@ -65,7 +65,7 @@ export class AuthService {
             return await this.account.get()
         } catch (error) {
             console.log("Appwrite Service :: getCurrentUser :: error", error);
-            throw error;
+            return null;
         }
     }
 
