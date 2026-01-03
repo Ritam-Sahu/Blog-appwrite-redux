@@ -18,7 +18,8 @@ export default function Protected({children, authentication = true}){
         // If page requires login, but user is NOT logged in → send to Login page
         if(authentication && authStatus !== authentication){
             navigate("/login")
-        }else if(!authentication && authStatus !== authentication){
+        }
+        else if(!authentication && authStatus !== authentication){
             navigate("/")
         }
         setLoader(false)
