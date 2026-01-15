@@ -1,16 +1,97 @@
-# React + Vite
+# 📝 Blog App (Appwrite + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack **blog application** built with **React**, **Redux Toolkit**, and **Appwrite**.  
+This project demonstrates authentication, protected routes, CRUD operations, image uploads, and rich text editing — all following clean architecture and best practices.
 
-Currently, two official plugins are available:
+> ⚠️ **Note:** This project is **not hosted**. It is intended for learning, practice, and local development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔐 Authentication (Signup / Login / Logout)
+- 🛡️ Protected routes (only logged-in users can create/edit posts)
+- ✍️ Create, edit, delete blog posts
+- 🖼️ Image upload & preview using Appwrite Storage
+- 📝 Rich Text Editor (TinyMCE)
+- 🧭 Slug-based routing for posts
+- 🗂️ Global state management with Redux Toolkit
+- 🎨 Styled using Tailwind CSS
+- ⚡ Built with Vite for fast development
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+**Frontend**
+- React
+- React Router
+- Redux Toolkit
+- React Hook Form
+- TinyMCE
+- Tailwind CSS
+- Vite
+
+**Backend / BaaS**
+- Appwrite (Auth, Database, Storage)
+
+---
+
+## 📁 Project Structure
+src/
+├── appwrite/ # Appwrite services (auth, database, storage)
+├── components/ # Reusable UI components
+├── pages/ # Route-level pages
+├── features/ # Redux slices
+├── store/ # Redux store config
+├── conf/ # Environment config
+└── main.jsx # App entry point
+
+▶️ Run Locally
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+Open: http://localhost:5173
+
+
+🧠 Architecture Highlights
+
+Service Layer Pattern
+Appwrite logic is isolated inside service classes to avoid vendor lock-in.
+
+Redux for Auth State
+Authentication status is globally managed for predictable UI behavior.
+
+Reusable PostForm
+Single form handles both create & edit operations.
+
+Protected Routing
+Pages are guarded based on authentication state.
+
+
+📌 Known Limitations
+
+No deployment / hosting
+No role-based authorization (admin/editor)
+No comments or likes feature
+
+🎯 Purpose of This Project
+
+Learn Appwrite integration
+Practice React + Redux architecture
+Build a real-world CRUD application
+Prepare for frontend interviews
+
+
+🙌 Author
+Ritam Sahu
+Developer | React | Redux | Appwrite
+
+
+
+---
+⭐ If you like this project
+Give it a ⭐ on GitHub — it helps a lot!
