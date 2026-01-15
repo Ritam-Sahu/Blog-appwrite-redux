@@ -1,12 +1,12 @@
 import React, {useCallback, useEffect} from "react";
 import {useForm} from 'react-hook-form'
 import {Button, Input, Select, RTE} from '../index'
-import appwriteService from '../../services/config'
+import appwriteService from '../../appwirte/config'
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 
-export default function PostFrom({post}){
+export default function PostForm({post}){
 
     // Initialize form with default values
     // If editing → load post data
@@ -23,7 +23,7 @@ export default function PostFrom({post}){
 
     const navigate = useNavigate();
     // Logged-in user (used when creating a new post)
-    const userData = useSelector(state => state.user.userData)
+    const userData = useSelector(state => state.auth.userData)
 
 /**
    * FORM SUBMIT HANDLER
